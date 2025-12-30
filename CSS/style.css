@@ -1,0 +1,513 @@
+
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Encabezado principal */
+    header {
+      background: linear-gradient(135deg, #272e8d 0%, #3d0d96 100%);
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-contenedor {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Logo y nombre */
+    .logo-nombre {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    /* Navegación principal */
+    .navbarra ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .navbarra a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      transition: background 0.3s;
+      font-weight: 1500;
+    }
+
+    .navbarra a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+
+
+    /* Barra de búsqueda */
+    .busqueda-contenedor {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .busqueda-contenedor input {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      width: 200px;
+      outline: none;
+    }
+
+    .busqueda-contenedor button {
+      padding: 0.5rem 1.5rem;
+      background: #e9b715;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .busqueda-contenedor button:hover {
+      background: #dbc026;
+    }
+
+    /* Contenido principal de la wiki */
+    main {
+      max-width: 2400px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+
+    .wiki-contenido {
+      background: white;
+      padding: 1.7rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .wiki-contenido h1 {
+      color: #667eea;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .wiki-contenido h2 {
+      color: #764ba2;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .wiki-articulo {
+      margin-bottom: 2rem;
+    }
+
+    .wiki-articulo p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    /* Tabla de contenidos */
+    .tabla-contenidos {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+      margin-bottom: 2rem;
+    }
+
+    .tabla-contenidos h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+
+    .tabla-contenidos ul {
+      list-style: none;
+    }
+
+    .tabla-contenidos li {
+      margin: 0.5rem 0;
+    }
+
+    .tabla-contenidos a {
+      color: #764ba2;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .tabla-contenidos a:hover {
+      color: #667eea;
+    }
+
+    /* Código en la wiki */
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-contenedor {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .navbarra ul {
+        justify-content: center;
+      }
+
+      .busqueda-contenedor {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .busqueda-contenedor input {
+        flex: 1;
+      }
+    }
+
+
+    /* ====== ESTILOS DEL FOOTER ====== */
+    .footer {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #fff;
+      padding: 3rem 1rem 1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .contenedor-footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .columna h3,
+    .seccion-footer h3 {
+      color: #ffd700;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+      padding-bottom: 0.5rem;
+    }
+
+    .columna p,
+    .seccion-footer p {
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .lista-footer {
+      list-style: none;
+      padding: 0;
+    }
+
+    .lista-footer li {
+      margin-bottom: 0.6rem;
+    }
+
+    .lista-footer a {
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: color 0.3s, padding-left 0.3s;
+      display: inline-block;
+    }
+
+    .lista-footer a:hover {
+      color: #ffd700;
+      padding-left: 5px;
+    }
+
+    .seccion-footer i {
+      margin-right: 8px;
+      color: #ffd700;
+    }
+
+    .btn-rss {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #ff6b35;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s, transform 0.3s;
+      font-weight: 600;
+    }
+
+    .btn-rss:hover {
+      background: #ff8555;
+      transform: scale(1.05);
+    }
+
+    /* Redes Sociales */
+    .redes-sociales {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .redes-sociales a {
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+
+    .redes-sociales a:hover {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .redes-sociales img {
+      width: 40px;
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+
+    /* Licencias y tecnologías */
+    .pagos {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .pagos h3 {
+      color: #ffd700;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .pagos-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .pagos-icons img {
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .pagos-icons img:hover,
+    .pagos-icons i:hover {
+      transform: scale(1.2);
+    }
+
+    /* Información Legal */
+    .informacion-legal {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .informacion-legal ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .informacion-legal a {
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .informacion-legal a:hover {
+      color: #ffd700;
+    }
+
+    .informacion-legal p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: #d0d0d0;
+    }
+
+    .powered-by {
+      font-style: italic;
+      color: #b0b0b0;
+    }
+
+    .powered-by span {
+      color: #ffd700;
+      font-weight: 600;
+    }
+
+    /* ====== BANNER DE COOKIES ====== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+      z-index: 9999;
+      animation: slideUp 0.5s ease-out;
+      flex-wrap: wrap;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .cookie-banner p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .cookie-banner a {
+      color: #ffd700;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    #accept-cookies {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    #accept-cookies:hover {
+      background: #45a049;
+      transform: scale(1.05);
+    }
+
+    /* ====== BOTÓN VOLVER ARRIBA ====== */
+    #btn-arriba {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #btn-arriba:hover {
+      transform: scale(1.1) translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    #btn-arriba img {
+      width: 40px;
+      height: 40px;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    /* ====== SALUDO DINÁMICO ====== */
+    .saludo-dinamico {
+      width: 100%;
+      padding: 1.2rem 2rem;
+      text-align: center;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: aparecerSaludo 1.2s ease-out;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(3px);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .saludo-dinamico:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    @keyframes aparecerSaludo {
+      from {
+        opacity: 0;
+        transform: translateY(-15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Footer */
+    @media (max-width: 768px) {
+      .contenedor-footer {
+        grid-template-columns: 1fr;
+      }
+
+      .informacion-legal ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .pagos-icons {
+        gap: 1rem;
+      }
+    }

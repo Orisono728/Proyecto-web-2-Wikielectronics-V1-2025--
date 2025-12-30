@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Wikielectronics</title>
+  
+  <!-- Icono del sitio (favicon) -->
+  <link rel="icon" href="../IMG/favicon.ico" type="image/x-icon">
+  
+  <!-- Estilos externos: Bootstrap para diseño responsivo -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="preload" href="../CSS/style.css" as="style"> 
+  <!--Vínculación al CSS EXTERNO--> 
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+  <!-- Encabezado del sitio -->
+  <header>
+    <div class="header-contenedor">
+      <!-- Logo y enlace a inicio -->
+      <div class="logo-nombre">
+        <a href="index.html">
+          <img src="../IMG/favicon.ico" alt="Logo Wikielectronics" class="logo">
+        </a>
+      </div>
+      
+      <!-- Menú de navegación principal -->
+      <nav class="navbarra">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+          <li><a href="foros.html"><i class="fas fa-comments"></i> Foros</a></li>
+          <li><a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a></li>
+          <li><a href="linux.html"><i class="fab fa-linux"></i> Linux</a></li>
+          <li><a href="login.html"><i class="fas fa-heart"></i> Donar</a></li>
+        </ul>
+      </nav>
+
+      <!-- Buscador del sitio -->
+      <div class="busqueda-contenedor">
+        <input type="text" placeholder="Buscar en la wiki..." id="busqueda">
+        <button type="button" onclick="buscar()">
+          <i class="fas fa-search"></i> Buscar
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Contenido principal de la wiki -->
+  <main>
+    <div class="wiki-contenido">
+      <!-- Título principal -->
+
+      <h1>Con gusto de verte nuevamente en: <Strong>Wikielectronics</Strong></h1>
+      
+
+     <!-- Wiki: Comparativa de Sistemas Operativos — Windows, Linux, freebsd y solaris-->
+<section class="wiki">
+  <header class="wiki-header">
+    <h1><i class="fa-solid fa-terminal"></i> Sistemas operativos: Windows, Linux, Freebsd y Solaris</h1>
+    <p class="wiki-sub">Comparativa técnica, arquitectónica y de uso. Propósito: dotar al lector de criterios prácticos para elegir y administrar cada familia.</p>
+  </header>
+
+    <!-- Navegación interna -->
+  <nav class="wiki-nav" aria-label="Índice">
+    <ul>
+      <li><a href="#resumen">Resumen ejecutivo</a></li>
+      <li><a href="#freebsd">FreeBSD</a></li>
+      <li><a href="#windows">Windows</a></li>
+      <li><a href="#linux">Linux</a></li>
+      <li><a href="#solaris">Solaris</a></li>
+      <li><a href="#comparativa">Comparativa técnica</a></li>
+      <li><a href="#casos-uso">Casos de uso y recomendaciones</a></li>
+      <li><a href="#glosario">Glosario</a></li>
+      <li><a href="#conclusion">Conclusión</a></li>
+    </ul>
+  </nav>
+
+    <!-- Resumen ejecutivo -->
+  <article class="wiki-articulo" id="resumen">
+    <h2><i class="fa-solid fa-lightbulb"></i> Resumen ejecutivo</h2>
+    <p>
+      Windows, Linux y Solaris representan tres enfoques distintos de ingeniería de sistemas. Windows prioriza compatibilidad de aplicaciones y experiencia de usuario, Linux ofrece modularidad, control y diversidad de distribuciones; Solaris históricamente se ha centrado en escalabilidad, tolerancia a fallos y características empresariales de alto rendimiento. La elección depende de requisitos: software disponible, seguridad operativa, soporte hardware y filosofía de administración.
+    </p>
+  </article>
+
+      <br><br><br>
+      <center>
+      <img src="../IMG/FreeBSD_13.0_boot_loader_autoboot_screenshot.png">
+      </center>
+
+      <h2>FreeBSD: Una aventura al sistema operativo que a todos se nos olvida de la conversación <i class="fa-brands fa-freebsd"></i></h2>
+      <p>
+
+      FreeBSD es un sistema operativo de carácter Unix-like que mismo es de software libre, descendiente directo de la Berkeley Software Distribution (BSD). Su primera versión fue publicada el 1 de noviembre de 1993, desarrollada a partir de 386BSD, y rápidamente se consolidó como uno de los primeros clones de Unix completamente funcionales y libres capaces de ejecutarse en hardware doméstico accesible. Desde entonces, FreeBSD ha sido el sistema BSD derivado más utilizado y con mayor continuidad histórica.
+
+El desarrollo de FreeBSD está a cargo del FreeBSD Project, una comunidad global de desarrolladores y mantenedores. El sistema está escrito principalmente en C (estándar C11) y se distribuye bajo la Licencia FreeBSD, una licencia permisiva que permite el uso, modificación y redistribución del código con mínimas restricciones, en contraste con el enfoque copyleft de la GPL utilizada por Linux.
+
+A diferencia de Linux —que distribuye únicamente el kernel y depende de proyectos externos como GNU para el espacio de usuario— FreeBSD se concibe como un sistema operativo completo e integrado. Incluye el kernel, los controladores de dispositivos, las utilidades del userland, el sistema de documentación y las herramientas administrativas, todo desarrollado y mantenido de forma coherente dentro del mismo proyecto. Este enfoque prioriza la estabilidad, la consistencia y el control de calidad.
+
+El kernel de FreeBSD es monolítico con soporte para módulos cargables dinámicamente, lo que combina rendimiento con flexibilidad. El sistema utiliza shells Unix tradicionales como sh o tcsh, seleccionables por el usuario. Su administrador de paquetes es pkg, complementado por el robusto sistema de FreeBSD Ports, que permite compilar aplicaciones desde el código fuente con opciones personalizadas.
+
+FreeBSD está orientado principalmente a servidores, estaciones de trabajo, sistemas embebidos y firewalls de red, aunque también puede emplearse como sistema de escritorio para usuarios técnicos. Las plataformas compatibles de nivel 1 incluyen amd64 (x86-64) y ARM de 64 bits, con soporte adicional para arquitecturas como RISC-V, ARMv7 y PowerPC. Históricamente, también ha soportado arquitecturas hoy discontinuadas como MIPS, IA-64 y SPARC.
+
+El proyecto mantiene un equipo de seguridad dedicado, responsable de auditar y responder a vulnerabilidades en todo el software incluido en la distribución base. Además, FreeBSD cuenta con el respaldo institucional de la FreeBSD Foundation, que apoya el desarrollo, la infraestructura y la promoción del sistema.
+
+Una de las mayores pruebas de la solidez técnica de FreeBSD es su adopción en otros sistemas de alto impacto. Partes significativas de su código forman la base de Darwin, el núcleo de macOS, iOS, iPadOS, watchOS y tvOS. También es el fundamento de sistemas como TrueNAS, y del software de sistema de consolas como PlayStation 3, PlayStation 4, PlayStation 5 y PlayStation Vita. Asimismo, los otros sistemas BSD modernos —OpenBSD, NetBSD y DragonFly BSD— comparten e intercambian código con FreeBSD de manera continua.
+</p>
+
+
+
+  <!-- Windows -->
+  <article class="wiki-articulo" id="windows">
+    <h2><i class="fa-brands fa-windows"></i> Windows</h2>
+
+    <section>
+      <h3>Visión general</h3>
+      <p>
+        Windows es una familia de sistemas operativos orientada al usuario final y a la compatibilidad binaria con aplicaciones comerciales. Está basada en el kernel <em>NT</em>, diseñado con una arquitectura de microkernel híbrido que prioriza compatibilidad y servicios nativos (GUI, gestión de dispositivos, subsistemas de compatibilidad).
+      </p>
+    </section>
+
+    <section>
+      <h3>Arquitectura y componentes clave</h3>
+      <ul>
+        <li><strong>Kernel:</strong> Windows NT — subsistemas (kernel, executive, drivers, HAL).</li>
+        <li><strong>Gestión de memoria:</strong> paginación con grandes áreas reservadas y memoria virtual.</li>
+        <li><strong>Sistema gráfico:</strong> Win32 + subsistemas modernos (DWM, DirectX en espacio de usuario).</li>
+        <li><strong>Seguridad:</strong> UAC, Defender, Windows Update y modelo de cuentas (SAM/Active Directory).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Administración y herramientas</h3>
+      <p>Herramientas nativas: PowerShell, Event Viewer, Group Policy, Windows Management Instrumentation (WMI).</p>
+      <pre><code>// Comandos de diagnóstico básicos
+systeminfo
+wmic cpu get name
+Get-EventLog -LogName System -Newest 20
+</code></pre>
+    </section>
+
+    <section>
+      <h3>Fortalezas y debilidades</h3>
+      <table>
+        <thead>
+          <tr><th>Fortalezas</th><th>Debilidades</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Compatibilidad masiva de software</td><td>Mayor superficie de ataque por popularidad</td></tr>
+          <tr><td>Interfaz uniforme para usuarios no técnicos</td><td>Menos control a bajo nivel para administradores</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </article>
+
+  <!-- Linux -->
+  <article class="wiki-articulo" id="linux">
+    <h2><i class="fa-brands fa-linux"></i> Linux</h2>
+
+    <section>
+      <h3>Visión general</h3>
+      <p>
+        Linux es un kernel acompañado por miles de distribuciones que combinan distintos userlands, gestores de paquetes y políticas de actualización. Su fortaleza es la modularidad: puedes elegir desde una distribución minimalista para un sistema embebido hasta una suite completa para centros de datos.
+      </p>
+    </section>
+
+    <section>
+      <h3>Arquitectura y componentes clave</h3>
+      <ul>
+        <li><strong>Kernel monolítico modular:</strong> drivers como módulos cargables (loadable modules).</li>
+        <li><strong>Espacio de usuario:</strong> GNU utilities, systemd / init alternatives, shells (bash, zsh).</li>
+        <li><strong>Gestión de paquetería:</strong> apt, yum/dnf, pacman, zypper, etc.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Administración y herramientas</h3>
+      <p>Comandos imprescindibles:</p>
+      <pre><code># Información del kernel y sistema
+uname -a
+lsb_release -a
+# Control de servicios (systemd)
+sudo systemctl status sshd
+sudo journalctl -u sshd --since "2 hours ago"
+</code></pre>
+    </section>
+
+    <section>
+      <h3>Diversidad y casos de uso</h3>
+      <p>
+        Las distribuciones (Debian/Ubuntu, Fedora/RHEL, Arch, Alpine, etc.) responden a distintos trade-offs: estabilidad, modernidad, tamaño, filosofía. Linux domina servidores, cloud, contenedores y sistemas embebidos por su ligereza y control.
+      </p>
+    </section>
+
+    <section>
+      <h3>Seguridad y mantenimiento</h3>
+      <details>
+        <summary>Prácticas recomendadas</summary>
+        <ol>
+          <li>Actualizaciones regulares y revisión de CVEs.</li>
+          <li>Principio de mínimos privilegios y uso de namespaces/containers para aislamiento.</li>
+          <li>Hardenización: SELinux/AppArmor, firewall (nftables/iptables).</li>
+        </ol>
+      </details>
+    </section>
+  </article>
+
+  <!-- Solaris -->
+  <article class="wiki-articulo" id="solaris">
+    <h2><i class="fa-solid fa-sun"></i> Solaris</h2>
+
+    <section>
+      <h3>Visión general</h3>
+      <p>
+        Solaris, legado de Sun Microsystems y actualmente mantenido en variantes comerciales y comunitarias, se diseñó para entornos empresariales que requieren escalabilidad, estabilidad y características avanzadas de administración de sistemas.
+      </p>
+    </section>
+
+    <section>
+      <h3>Características técnicas destacadas</h3>
+      <ul>
+        <li><strong>ZFS:</strong> sistema de archivos y gestor de volúmenes con integridad de datos y snapshots.</li>
+        <li><strong>SMF (Service Management Facility):</strong> sistema de gestión de servicios con dependencias y recuperación automática.</li>
+        <li><strong>Recursos de virtualización:</strong> containers (zones) y soluciones de virtualización de alto rendimiento.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Administración y comandos</h3>
+      <pre><code># Información básica
+uname -a
+# Paquetes (IPS)
+pkg info | head
+# Gestión de servicios (SMF)
+svcs -a | grep network
+svcadm restart svc:/network/physical
+</code></pre>
+    </section>
+
+    <section>
+      <h3>Fortalezas y escenarios</h3>
+      <p>
+        Solaris destaca en cargas que requieren coherencia de datos en gran escala (almacenamiento) y en entornos donde ZFS y la administración integrada aportan valor. Su adopción en la nube pública y privada es menor comparada con Linux, pero sigue siendo relevante en nichos empresariales.
+      </p>
+    </section>
+  </article>
+
+  <!-- Comparativa técnica -->
+  <article class="wiki-articulo" id="comparativa">
+    <h2><i class="fa-solid fa-balance-scale"></i> Comparativa técnica</h2>
+
+    <table class="comparativa-tabla" border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>Ámbito</th><th>Windows</th><th>Linux</th><th>Solaris</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Modelo de kernel</td>
+          <td>NT (híbrido)</td>
+          <td>Monolítico modular</td>
+          <td>Monolítico con extensiones empresariales</td>
+        </tr>
+        <tr>
+          <td>Sistema de archivos</td>
+          <td>NTFS, ReFS (moderno)</td>
+          <td>ext4, xfs, btrfs, ZFS (a través de módulos)</td>
+          <td>ZFS nativo</td>
+        </tr>
+        <tr>
+          <td>Gestión de paquetes</td>
+          <td>Instaladores/Store</td>
+          <td>apt/dnf/pacman/... (varía por distro)</td>
+          <td>IPS pkg</td>
+        </tr>
+        <tr>
+          <td>Ámbito predominante</td>
+          <td>Escritorio, aplicaciones comerciales</td>
+          <td>Servidores, cloud, embebido</td>
+          <td>Enterprise, almacenamiento</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Casos de uso -->
+  <article class="wiki-articulo" id="casos-uso">
+    <h2><i class="fa-solid fa-briefcase"></i> Casos de uso y recomendaciones</h2>
+
+    <ul>
+      <li><strong>Escritorio de usuario general:</strong> Windows (compatibilidad), Linux (privacidad y personalización).</li>
+      <li><strong>Servidores web/infraestructura cloud:</strong> Linux por flexibilidad y ecosistema de contenedores.</li>
+      <li><strong>Almacenamiento empresarial y bases de datos críticas:</strong> Solaris (ZFS) o Linux con ZFS según soporte.</li>
+      <li><strong>Entornos híbridos y compatibilidad:</strong> usar herramientas de virtualización y contenedores para aislar y portar cargas entre plataformas.</li>
+    </ul>
+
+    <details>
+      <summary>Recomendación rápida para administradores</summary>
+      <ol>
+        <li>Definir requisitos no funcionales: RTO/RPO, latencia, throughput.</li>
+        <li>Evaluar ecosistema de soporte (proveedor, comunidad, parches).</li>
+        <li>Probar cargas en staging con métricas reproducibles.</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Glosario -->
+  <article class="wiki-articulo" id="glosario">
+    <h2><i class="fa-solid fa-book"></i> Glosario</h2>
+    <dl>
+      <dt>Kernel</dt><dd>Parte central del sistema operativo que gestiona recursos y comunicación HW–SW.</dd>
+      <dt>ZFS</dt><dd>Sistema de archivos avanzado con verificación de integridad y snapshots.</dd>
+      <dt>SMF</dt><dd>Service Management Facility: gestor de servicios de Solaris con políticas de recuperación.</dd>
+    </dl>
+  </article>
+
+  <!-- Conclusión -->
+  <article class="wiki-articulo" id="conclusion">
+    <h2><i class="fa-solid fa-check"></i> Conclusión</h2>
+    <p>
+      En ingeniería, elegir un sistema operativo es elegir un contrato con el futuro: Windows ofrece compatibilidad y experiencia de usuario; Linux, libertad, adaptabilidad y dominio en infraestructuras modernas; Solaris, solidez en almacenamiento y entornos críticos. Aprende los supuestos de diseño de cada plataforma y deja que los requisitos (no la moda) guíen tu decisión.
+    </p>
+  </article>
+
+  <footer class="wiki-footer">
+    <p>Autor: Equipo técnico — Versión: 1.0 — Última revisión: <!-- Inserta fecha --> </p>
+  </footer>
+</section>
+
+  </main>
+
+  <!-- Scripts de Bootstrap (necesarios para funcionalidad) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- Script para funcionalidad de búsqueda -->
+  <script>
+    function buscar() {
+      // Obtiene el texto de búsqueda
+      const termino = document.getElementById('busqueda').value.toLowerCase();
+      
+      if (termino === '') {
+        alert('Por favor ingresa un término de búsqueda');
+        return;
+      }
+      
+      // Aquí puedes implementar la lógica de búsqueda
+      alert('Buscando: ' + termino);
+      // En una implementación real, buscarías en el contenido de la wiki
+    }
+  </script>
+
+  <!-- Scripts de Bootstrap (necesarios para funcionalidad) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <br><br><br>
+
+  <!-- Banner de Cookies -->
+  <div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <p>
+      ¡Hola! 🍪 Usamos cookies para mejorar tu experiencia en la wiki. 
+      <a href="Legal.html">Más información</a>
+    </p>
+    <button id="accept-cookies">Aceptar</button>
+  </div>
+
+  <!-- =========================
+       PIE DE PÁGINA 
+  ========================= -->
+  <footer class="footer">
+    <div class="contenedor-footer">
+      
+      <!-- Columna 1: Identidad -->
+      <div class="columna">
+        <h3>Wikielectronics</h3>
+        <p>⚡ Wiki colaborativa de electrónica, programación y tecnología. Compartimos conocimiento libre para construir un mundo más conectado y tecnológico.</p>
+        <p>Arduino, Raspberry Pi, circuitos, código abierto y mucho más.</p>
+      </div>
+
+      <!-- Columna 2: Contenido -->
+      <div class="columna">
+        <h3>Secciones</h3>
+        <ul class="lista-footer">
+          <li><a href="componentes.html">Componentes Electrónicos</a></li>
+          <li><a href="tutoriales.html">Tutoriales y Proyectos</a></li>
+          <li><a href="arduino.html">Arduino y Microcontroladores</a></li>
+          <li><a href="raspberry.html">Raspberry Pi</a></li>
+          <li><a href="programacion.html">Programación</a></li>
+          <li><a href="Blog.html">Blog Técnico</a></li>
+          <li><a href="recursos.html">Recursos y Descargas</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Comunidad -->
+      <div class="columna">
+        <h3>Comunidad</h3>
+        <ul class="lista-footer">
+          <li><a href="faq.html">Preguntas Frecuentes</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li><a href="contribuir.html">Cómo Contribuir</a></li>
+          <li><a href="guias.html">Guías de Estilo</a></li>
+          <li><a href="foro.html">Foro de Discusión</a></li>
+          <li><a href="proyectos.html">Proyectos Destacados</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Cuenta -->
+      <div class="columna">
+        <h3>Mi Cuenta</h3>
+        <ul class="lista-footer">
+          <li><a href="login.html">Iniciar Sesión</a></li>
+          <li><a href="registro.html">Registrarse</a></li>
+          <li><a href="perfil.html">Mi Perfil</a></li>
+          <li><a href="contribuciones.html">Mis Contribuciones</a></li>
+          <li><a href="CerrarLogin.html">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 5: Información de Contacto -->
+      <div class="seccion-footer">
+        <h3>⚡ Información de Contacto 🔧</h3>
+        <br>
+        <p><i class="fas fa-map-marker-alt"></i> Armenia, Quindío - Colombia</p>
+        <p><i class="fas fa-phone"></i> +57 321 353 2665</p>
+        <p><i class="fas fa-envelope"></i> contacto@wikielectronics.com</p>
+        <p><i class="fas fa-globe"></i> www.wikielectronics.com</p>
+        <p><i class="fas fa-clock"></i> Wiki disponible 24/7</p>
+        <a href="rss.xml" class="btn-rss" target="_blank" title="Suscribirse al canal RSS">
+          📡 Suscribirse a nuestro RSS 
+        </a>
+      </div>
+
+   <!-- Columna 6: Redes Sociales -->
+<div class="columna">
+  <h3>Síguenos</h3>
+  <div class="redes-sociales">
+    <a href="https://www.facebook.com" target="_blank" title="Facebook Wikielectronics">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com" target="_blank" title="X (Twitter)">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" title="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+    <a href="https://github.com" target="_blank" title="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+</div>
+
+
+    <!--Tecnologias -->
+    <div class="pagos">
+      <h3>Tecnologías que te podemos enseñar</h3>
+      <div class="pagos-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/120px-ISO_C%2B%2B_Logo.svg.png" alt="C++" style="height: 40px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/121px-Python-logo-notext.svg.png" alt="Python" style="height: 40px;">
+        <i class="fab fa-html5" style="font-size: 40px; color: #e34c26;"></i>
+        <i class="fab fa-css3-alt" style="font-size: 40px; color: #264de4;"></i>
+        <i class="fab fa-js" style="font-size: 40px; color: #f0db4f;"></i>
+        <i class="fab fa-linux" style="font-size: 40px; color: #fcc624;"></i>
+        <i class="fab fa-raspberry-pi" style="font-size: 40px; color: #c51a4a;"></i>
+      </div>
+    </div>
+
+    <!-- Información Legal -->
+    <div class="informacion-legal">
+      <ul>
+        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+        <li><a href="licencia.html">Licencia Creative Commons</a></li>
+      </ul>
+      <p>© 2025 <strong>Wikielectronics</strong>. Todo el contenido bajo licencia Creative Commons BY-SA 4.0.  
+        Desarrollado con 💛💙❤️ desde Armenia, Quindío.</p>
+      <p class="powered-by">Powered by <span>Wikielectronics Community 🐧⚡</span></p>
+    </div>
+    
+    <!-- Saludo Dinámico -->
+    <div id="saludo-container"></div>
+
+  </footer>
+
+  <!-- Script para funcionalidad de búsqueda -->
+  <script>
+    function buscar() {
+      const termino = document.getElementById('busqueda').value.toLowerCase();
+      
+      if (termino === '') {
+        alert('Por favor ingresa un término de búsqueda');
+        return;
+      }
+      
+      alert('Buscando: ' + termino);
+    }
+
+    // ====== BOTÓN VOLVER ARRIBA ======
+    const btnArriba = document.getElementById("btn-arriba");
+
+    window.addEventListener("scroll", () => {
+      if (document.documentElement.scrollTop > 200) {
+        btnArriba.style.display = "block";
+      } else {
+        btnArriba.style.display = "none";
+      }
+    });
+
+    btnArriba.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    // ====== BANNER DE COOKIES ======
+    const cookieBanner = document.getElementById("cookie-banner");
+    const aceptarBtn = document.getElementById("accept-cookies");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Verificar si las cookies ya fueron aceptadas
+      const cookiesAceptadas = localStorage.getItem("cookiesAceptadas");
+      if (!cookiesAceptadas) {
+        cookieBanner.style.display = "flex";
+      }
+      
+      // Saludo dinámico
+      const hora = new Date().getHours();
+      let mensaje = "";
+      let bgColor = "";
+      let textColor = "";
+
+      if (hora < 6) {
+        mensaje = "🌅 Programando de madrugada... el código nunca duerme.";
+        bgColor = "linear-gradient(90deg, #0d1b2a, #1b263b)";
+        textColor = "#8dd9ff";
+      } else if (hora < 12) {
+        mensaje = "☀️ ¡Buenos días, maker! Hoy es un gran día para aprender algo nuevo.";
+        bgColor = "linear-gradient(90deg, #f7c948, #f8e16c)";
+        textColor = "#2d2d2d";
+      } else if (hora < 18) {
+        mensaje = "🔧 ¡Buenas tardes! Sigue construyendo, experimentando y creando.";
+        bgColor = "linear-gradient(90deg, #f37335, #fdc830)";
+        textColor = "#fffdf5";
+      } else if (hora < 21) {
+        mensaje = "🌇 ¡Atardece! Un buen momento para revisar tu proyecto del día.";
+        bgColor = "linear-gradient(90deg, #fc466b, #3f5efb)";
+        textColor = "#f7f7f7";
+      } else {
+        mensaje = "🌙 ¡Buenas noches, techie! No olvides hacer commit antes de dormir.";
+        bgColor = "linear-gradient(90deg, #141e30, #243b55)";
+        textColor = "#c0eaff";
+      }
+
+      const saludo = document.createElement("div");
+      saludo.classList.add("saludo-dinamico");
+      saludo.textContent = mensaje;
+      saludo.style.background = bgColor;
+      saludo.style.color = textColor;
+
+      const infoLegal = document.querySelector(".informacion-legal");
+      if (infoLegal) {
+        infoLegal.prepend(saludo);
+      }
+    });
+
+    aceptarBtn.addEventListener("click", () => {
+      localStorage.setItem("cookiesAceptadas", "true");
+      cookieBanner.style.display = "none";
+    });
+  </script>
+</body>
+</html>
